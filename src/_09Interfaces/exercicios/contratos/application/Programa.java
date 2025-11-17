@@ -33,12 +33,10 @@ public class Programa {
         System.out.print("Entre com o numero de parcelas: ");
         int numeroParcelas = sc.nextInt();
 
-//        ServicoAluguel servicoAluguel = new ServicoAluguel(precoPorHora, precoPorDia, new ServicoImpostoBrasil());
         ServicoContrato servicoContrato = new ServicoContrato(new ServicoPaypal());
         servicoContrato.processoContrato(c1, numeroParcelas);
 
         System.out.println("PARCELAS: ");
-
         for(Parcelas p : c1.getParcelas()){
             System.out.println(p);
         }

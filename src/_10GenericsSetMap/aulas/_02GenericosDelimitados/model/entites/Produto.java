@@ -1,0 +1,42 @@
+package _10GenericsSetMap.aulas._02GenericosDelimitados.model.entites;
+
+
+
+public class Produto implements Comparable<Produto>{
+
+    private String nome;
+    private Double preco;
+
+    public Produto(String nome, Double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+    @Override
+    public int compareTo(Produto outro) {
+        return this.preco.compareTo(outro.getPreco());
+    }
+
+    @Override
+    public String toString() {
+        return nome + ", " + String.format("%.2f", preco);
+    }
+
+}
+

@@ -1,0 +1,35 @@
+package _09Interfaces.aulas._02herdarVsCumprirContrato.classeAbstrataEInterface.model.entities;
+import _09Interfaces.aulas._02herdarVsCumprirContrato.classeAbstrataEInterface.model.enums.Cor;
+
+public class Retangulo extends AbstrataForma {
+
+    private Double largura;
+    private Double altura;
+
+    public Retangulo(Cor cor, Double largura, Double altura) {
+        super(cor);
+        this.largura = largura;
+        this.altura = altura;
+    }
+
+    public Double getLargura() {
+        return largura;
+    }
+
+    public void setLargura(Double largura) {
+        this.largura = largura;
+    }
+
+    public Double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(Double altura) {
+        this.altura = altura;
+    }
+
+    @Override
+    public Double area() {
+        return largura * altura;
+    }
+}

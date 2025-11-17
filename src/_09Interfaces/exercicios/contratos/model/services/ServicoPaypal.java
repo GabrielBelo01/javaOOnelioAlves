@@ -8,8 +8,7 @@ public class ServicoPaypal implements ServicoPagamentoOnline {
 
     @Override
     public Double juros(Double valor, Integer mes) {
-        double taxa = 0.01;
-        return  valor * taxa * mes;
+        return  valor * 0.01 * mes;
     }
 
 }

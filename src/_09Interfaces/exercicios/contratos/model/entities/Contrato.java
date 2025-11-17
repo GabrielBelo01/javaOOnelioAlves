@@ -9,7 +9,7 @@ public class Contrato {
     private LocalDate dataContrato;
     private Double valorTotal;
 
-    List<Parcelas> parcelas = new ArrayList<>();
+    private List<Parcelas> parcelas = new ArrayList<>();
 
     public Contrato() {}
 

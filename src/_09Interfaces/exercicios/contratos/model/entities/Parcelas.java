@@ -4,10 +4,13 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Parcelas {
-    DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+    private static DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     private LocalDate dataVencimento;
     private Double valor;
+
+    public Parcelas() {}
 
     public Parcelas(LocalDate dataVencimento, Double valor) {
         this.dataVencimento = dataVencimento;
@@ -32,6 +35,7 @@ public class Parcelas {
 
     @Override
     public String toString() {
-        return String.format("%.2f - %s", valor, fmt.format(dataVencimento));
+     return String.format("%s - %.2f", fmt.format(dataVencimento), valor);
+
     }
 }
